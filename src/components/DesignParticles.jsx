@@ -3,16 +3,14 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 const DesignParticles = ({ linkColor, particleColor }) => {
-
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     await loadFull(engine);
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-     console.log(container);
+    console.log(container);
   }, []);
-
 
   return (
     <div>
@@ -21,8 +19,7 @@ const DesignParticles = ({ linkColor, particleColor }) => {
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
-          background: {
-          },
+          background: {},
           fpsLimit: 60,
           interactivity: {
             events: {
@@ -41,7 +38,7 @@ const DesignParticles = ({ linkColor, particleColor }) => {
                 quantity: 4,
               },
               repulse: {
-                distance: 200,
+                distance: 150,
                 duration: 0.4,
               },
             },
@@ -51,10 +48,12 @@ const DesignParticles = ({ linkColor, particleColor }) => {
               value: particleColor,
             },
             links: {
-              color: { value: linkColor },
+              color: { 
+                value: linkColor,
+              },
               distance: 150,
               enable: true,
-              opacity: 0.4  ,
+              opacity: 0.5,
               width: 1,
             },
             collisions: {
@@ -67,13 +66,13 @@ const DesignParticles = ({ linkColor, particleColor }) => {
                 default: "bounce",
               },
               random: false,
-              speed: 6,
-              straight: false,
+              speed: 3,
+              straight: true,
             },
             number: {
               density: {
                 enable: true,
-                area: 1200,
+                area: 1350,
               },
               value: 100,
             },

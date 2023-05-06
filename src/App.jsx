@@ -7,8 +7,24 @@ import {
   AiFillLinkedin,
   AiFillTwitterCircle,
 } from "react-icons/ai";
-import { photo, myPhoto, consulting, code, design, botImage, bmcbuttonwhite, buyMeACoffee, bmcQrCode } from "./assets";
-import { Project, Service, Coffee, QRcode, DesignParticles } from "./components";
+import {
+  photo,
+  myPhoto,
+  consulting,
+  code,
+  design,
+  botImage,
+  bmcbuttonwhite,
+  buyMeACoffee,
+  bmcQrCode,
+} from "./assets";
+import {
+  Project,
+  Service,
+  Coffee,
+  QRcode,
+  DesignParticles,
+} from "./components";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -45,11 +61,11 @@ const App = () => {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-        <DesignParticles linkColor={darkMode ? "#ffffff" : "#757575"} particleColor={darkMode ? '#ffffff' : '#757575'} />
+      <DesignParticles linkColor={darkMode ? "#ff00ff" : "#000000"} particleColor={darkMode ? "#00008B" : "#ff00ff"} />
       <main className="bg-cyan-200 px-10 md:px-20 lg:px-40 dark:bg-gradient-to-t from-black to-gray-900 dark:text-white">
         {/* Header section */}
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
+          <nav className="py-10 mb-6 flex justify-between">
             <h1 className="text-3xl font-burtons">
               <a href="#">Rishu Raj</a>
             </h1>
@@ -234,8 +250,8 @@ const App = () => {
                 <h3 className="font-pacifico text-4xl underline items-center flex">
                   Thanks for visiting
                 </h3>
-                <Coffee image={darkMode ? buyMeACoffee : bmcbuttonwhite}/>
-                <QRcode image={bmcQrCode}/>
+                <Coffee image={darkMode ? buyMeACoffee : bmcbuttonwhite} />
+                <QRcode image={bmcQrCode} />
               </div>
             </div>
           </div>
