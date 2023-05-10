@@ -64,7 +64,7 @@ const App = () => {
       <DesignParticles linkColor={darkMode ? "#ff00ff" : "#000000"} particleColor={darkMode ? "#00008B" : "#ff00ff"} />
       <main className="bg-cyan-200 px-10 md:px-20 lg:px-40 dark:bg-gradient-to-t from-black to-gray-900 dark:text-white">
         {/* Header section */}
-        <section className="min-h-screen">
+        <section className="">
           <nav className="py-10 mb-6 flex justify-between">
             <h1 className="text-3xl font-burtons">
               <a href="#">Rishu Raj</a>
@@ -122,9 +122,9 @@ const App = () => {
           </div>
 
           {/* Avatar */}
-          <div className="bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden md:h-96 md:w-96 relative flex cursor-pointer transition duration-500 hover:scale-105">
+          <div className="bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden md:h-80 md:w-80 relative flex cursor-pointer transition duration-500 hover:scale-105">
             <img
-              className="object-cover w-full h-full overflow-hidden flex items-center"
+              className="object-cover w-full h-full flex items-center"
               src={over ? myPhoto : photo}
               onMouseOver={() => setOver(true)}
               onMouseOut={() => setOver(false)}
@@ -209,7 +209,7 @@ const App = () => {
         {/* Communication and footer */}
         <section className="">
           <div className="lg:flex gap-16 md:flex mt-20 shadow-xl p-5">
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center mb-5">
               <h3 className="font-semibold text-lg p-4">Feedback Form</h3>
               <form
                 className="items-start flex p-4 flex-col"
@@ -241,13 +241,13 @@ const App = () => {
                 />
                 <input
                   type="submit"
-                  className="bg-gradient-to-r hover:bg-gradient-to-l from-cyan-500 to-teal-500 px-4 py-2 rounded-md p-4 cursor-pointer"
+                  className="bg-gradient-to-r hover:bg-gradient-to-l from-cyan-500 to-teal-500 px-4 py-2 rounded-md p-4 cursor-pointer text-white"
                 />
               </form>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <div className="flex flex-col items-center justify-center gap-5">
-                <h3 className="font-pacifico text-4xl underline items-center flex">
+              <div className="flex flex-col items-center justify-center gap-6">
+                <h3 className="font-pacifico text-4xl underline items-center flex text-center">
                   Thanks for visiting
                 </h3>
                 <Coffee image={darkMode ? buyMeACoffee : bmcbuttonwhite} />
