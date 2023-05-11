@@ -61,7 +61,10 @@ const App = () => {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <DesignParticles linkColor={darkMode ? "#ff00ff" : "#000000"} particleColor={darkMode ? "#00008B" : "#ff00ff"} />
+      <DesignParticles
+        linkColor={darkMode ? "#ff00ff" : "#000000"}
+        particleColor={darkMode ? "#00008B" : "#ff00ff"}
+      />
       <main className="bg-cyan-200 px-10 md:px-20 lg:px-40 dark:bg-gradient-to-t from-black to-gray-900 dark:text-white">
         {/* Header section */}
         <section className="">
@@ -137,13 +140,11 @@ const App = () => {
         <section>
           <div className="flex flex-col items-center">
             <h3 className="text-3xl py-1 mt-20 mb-4">Services</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-teal-600">
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-teal-600 text-md flex text-center">
               As a front end developer, I can make beautiful, simplistic and
-              minimal frontend designs with maximum functionality to offer.
-            </p>
-            <p className="text-md py-2 leading-8 dark:text-teal-600 text-gray-800">
-              Here are some key features. If you like this, feel free to reach
-              out from the feedback section below.
+              minimal frontend designs with maximum functionality to offer. Here
+              are some key features. If you like this, feel free to reach out
+              from the feedback section below.
             </p>
           </div>
 
@@ -184,10 +185,17 @@ const App = () => {
         <section>
           <div className="flex flex-col items-center">
             <h3 className="text-3xl py-1 mt-20 mb-3">Projects</h3>
-            <p className="text-md p-4 leading-8 text-gray-800 dark:text-teal-600">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Consectetur molestias tenetur ea voluptas nobis iusto aut aliquid
-              commodi earum numquam.
+            <p className="text-md p-4 leading-8 text-gray-800 dark:text-teal-600 flex text-center">
+              In my projects section, you will find a showcase of my technical
+              abilities and creativity across a diverse range of fields,
+              including AI development, software engineering, web development,
+              and more. Each project represents my passion for innovation and my
+              commitment to pushing the boundaries of what is possible with
+              technology. With a focus on practicality and usefulness, my
+              projects demonstrate my ability to develop intelligent and
+              effective solutions to real-world problems. Browse through my
+              portfolio to discover the range and depth of my technical
+              expertise.
             </p>
           </div>
 
@@ -196,12 +204,9 @@ const App = () => {
               image={botImage}
               link={"https://github.com/rishuraj1/LilBot-Discord-Bot"}
               name={"LilBot - Discord Bot"}
-            />
-
-            <Project
-              image={botImage}
-              link={"https://github.com/rishuraj1/LilBot-Discord-Bot"}
-              name={"LilBot - Discord Bot"}
+              details={
+                "I created a Discord bot project using ChatGPT AI that I am excited to showcase in my portfolio. The bot is designed to engage users in natural and intelligent conversation, responding to user input with relevant and contextual responses with a bit of sarcasm. It utilizes the powerful Da Vinci model from GPT-3 architecture."
+              }
             />
           </div>
         </section>
