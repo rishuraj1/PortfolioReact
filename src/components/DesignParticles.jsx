@@ -20,11 +20,11 @@ const DesignParticles = ({ linkColor, particleColor }) => {
         loaded={particlesLoaded}
         options={{
           background: {},
-          fpsLimit: 60,
+          fpsLimit: 120,
           interactivity: {
             events: {
               onClick: {
-                enable: true,
+                enable: false,
                 mode: "push",
               },
               onHover: {
@@ -48,12 +48,12 @@ const DesignParticles = ({ linkColor, particleColor }) => {
               value: particleColor,
             },
             links: {
-              color: { 
+              color: {
                 value: linkColor,
               },
               distance: 150,
               enable: true,
-              opacity: 0.5,
+              opacity: 0.4,
               width: 1,
             },
             collisions: {
@@ -65,25 +65,25 @@ const DesignParticles = ({ linkColor, particleColor }) => {
               outModes: {
                 default: "bounce",
               },
-              random: false,
-              speed: 3,
+              random: true,
+              speed: 4,
               straight: true,
             },
             number: {
               density: {
                 enable: true,
-                area: 1350,
+                area: 1500,
               },
               value: 100,
             },
             opacity: {
-              value: 0.5,
+              value: 0.4,
             },
             shape: {
               type: "circle",
             },
             size: {
-              value: { min: 1, max: 5 },
+              value: { min: 1, max: 4 },
             },
           },
           detectRetina: true,

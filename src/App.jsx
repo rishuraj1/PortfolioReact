@@ -62,12 +62,12 @@ const App = () => {
   return (
     <div className={darkMode ? "dark" : ""}>
       <DesignParticles
-        linkColor={darkMode ? "#ff00ff" : "#000000"}
-        particleColor={darkMode ? "#00008B" : "#ff00ff"}
+        linkColor={darkMode ? "#ffffff" : "#000000"}
+        particleColor={darkMode ? "#ffffff" : "#000000"}
       />
-      <main className="bg-cyan-200 px-10 md:px-20 lg:px-40 dark:bg-gradient-to-t from-black to-gray-900 dark:text-white">
+      <main className="bg-cyan-200  px-10 md:px-20 lg:px-40 dark:bg-gradient-to-t from-black to-gray-900 dark:text-white">
         {/* Header section */}
-        <section className="">
+        <section>
           <nav className="py-10 mb-6 flex justify-between">
             <h1 className="text-3xl font-burtons">
               <a href="#">Rishu Raj</a>
@@ -125,8 +125,10 @@ const App = () => {
           </div>
 
           {/* Avatar */}
-          <div className="bg-gradient-to-b from-teal-500 rounded-full mt-16 mx-auto overflow-hidden relative flex cursor-pointer 
-          transition duration-500 hover:scale-105 sm:h-52 sm:w-52 md:h-64 md:w-64 lg:h-72 lg:w-72">
+          <div
+            className="bg-gradient-to-b from-teal-500 rounded-full mt-16 mx-auto overflow-hidden relative flex cursor-pointer 
+          transition duration-500 hover:scale-105 sm:h-52 sm:w-52 md:h-64 md:w-64 lg:h-72 lg:w-72 justify-center items-center"
+          >
             <img
               className="object-cover w-full h-full flex items-center"
               src={over ? myPhoto : photo}
@@ -149,7 +151,7 @@ const App = () => {
             </p>
           </div>
 
-          <div className="lg:flex gap-16 md:flex">
+          <div className="lg:flex gap-16 md:flex items-start justify-center">
             <Service
               image={code}
               name={"Beautiful Designs"}
