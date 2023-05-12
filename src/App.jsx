@@ -125,7 +125,8 @@ const App = () => {
           </div>
 
           {/* Avatar */}
-          <div className="bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden md:h-80 md:w-80 relative flex cursor-pointer transition duration-500 hover:scale-105">
+          <div className="bg-gradient-to-b from-teal-500 rounded-full mt-16 mx-auto overflow-hidden relative flex cursor-pointer 
+          transition duration-500 hover:scale-105 sm:h-52 sm:w-52 md:h-64 md:w-64 lg:h-72 lg:w-72">
             <img
               className="object-cover w-full h-full flex items-center"
               src={over ? myPhoto : photo}
