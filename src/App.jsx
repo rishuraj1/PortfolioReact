@@ -17,6 +17,9 @@ import {
   bmcbuttonwhite,
   buyMeACoffee,
   bmcQrCode,
+  JPMorgan,
+  IBM,
+  GoldmanSachs,
 } from "./assets";
 import {
   Project,
@@ -24,6 +27,7 @@ import {
   Coffee,
   QRcode,
   DesignParticles,
+  Carousel,
 } from "./components";
 
 const App = () => {
@@ -214,8 +218,22 @@ const App = () => {
           </div>
         </section>
 
+        {/* Certifications section  */}
+        <section>
+          <div className="lg:flex gap-16 md:flex mt-20 shadow-xl p-5 flex-col items-center">
+            <h3 className="text-3xl py-1 mt-20 mb-3">Credentials</h3>
+            <p className="text-md p-4 leading-8 text-gray-800 dark:text-teal-600 flex text-center">
+              I have completed many courses and certifications. Here are some of
+              them.
+            </p>
+            <div className="lg:flex gap-16 md:flex items-start justify-center">
+              <Carousel />
+            </div>
+          </div>
+        </section>
+
         {/* Communication and footer */}
-        <section className="">
+        <section className>
           <div className="lg:flex gap-16 md:flex mt-20 shadow-xl p-5">
             <div className="flex flex-col items-center mb-5">
               <h3 className="font-semibold text-lg p-4">Feedback Form</h3>
@@ -264,6 +282,7 @@ const App = () => {
             </div>
           </div>
         </section>
+        <div className="h-10"></div>
       </main>
     </div>
   );

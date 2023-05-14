@@ -7,5 +7,6 @@ export { default as botImage } from './botImage.jpg';
 export { default as buyMeACoffee } from './buyMeACoffee.png';
 export { default as bmcbuttonwhite } from './bmcbuttonwhite.png';
 export { default as bmcQrCode } from './bmcQrCode.png';
-
-
+export { default as GoldmanSachs } from './GoldmanSachs.png';
+export { default as JPMorgan } from './JPMorgan.png';
+export { default as IBM } from './IBM.png';
