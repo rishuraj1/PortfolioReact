@@ -2,7 +2,7 @@ import React from "react";
 
 const Service = ({ name, image, about, toolsHeader, tools }) => {
   return (
-    <div className="text-center shadow-lg p-10 rounded-xl my-10 flex flex-col items-center">
+    <div className="text-center p-10 rounded-xl my-10 flex flex-col items-center">
       <img src={image} width={100} height={100} />
       <h3 className="text-lg font-medium pt-8 pb-2">{name}</h3>
       <p className="py-2 dark:text-teal-600">{about}</p>

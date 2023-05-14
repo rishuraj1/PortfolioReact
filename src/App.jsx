@@ -12,14 +12,10 @@ import {
   myPhoto,
   consulting,
   code,
-  design,
   botImage,
   bmcbuttonwhite,
   buyMeACoffee,
   bmcQrCode,
-  JPMorgan,
-  IBM,
-  GoldmanSachs,
 } from "./assets";
 import {
   Project,
@@ -28,6 +24,7 @@ import {
   QRcode,
   DesignParticles,
   Carousel,
+  MyTimeline,
 } from "./components";
 
 const App = () => {
@@ -144,7 +141,7 @@ const App = () => {
 
         {/* About section */}
 
-        <section>
+        <section className="shadow-lg mt-5">
           <div className="flex flex-col items-center">
             <h3 className="text-3xl py-1 mt-20 mb-4">Services</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-teal-600 text-md flex text-center">
@@ -154,7 +151,6 @@ const App = () => {
               from the feedback section below.
             </p>
           </div>
-
           <div className="lg:flex gap-16 md:flex items-start justify-center">
             <Service
               image={code}
@@ -189,7 +185,7 @@ const App = () => {
         </section>
 
         {/* Projects section */}
-        <section>
+        <section className="shadow-lg mt-5">
           <div className="flex flex-col items-center">
             <h3 className="text-3xl py-1 mt-20 mb-3">Projects</h3>
             <p className="text-md p-4 leading-8 text-gray-800 dark:text-teal-600 flex text-center">
@@ -218,21 +214,35 @@ const App = () => {
           </div>
         </section>
 
+        {/* Timeline */}
+
+        <section className="shadow-lg mt-5">
+          <div className="lg:flex gap-16 md:flex p-5 flex-col items-center relative">
+            <h3 className=" flex justify-center text-3xl py-1 mt-20 mb-3">
+              My Life
+            </h3>
+            <MyTimeline />
+          </div>
+        </section>
+
         {/* Certifications section  */}
-        <section>
-          <div className="lg:flex gap-16 md:flex  shadow-xl p-5 flex-col items-center relative">
-            <h3 className=" flex justify-center text-3xl py-1 mt-20 mb-3">Certifications</h3>
+        <section className="shadow-lg mt-5">
+          <div className="lg:flex gap-16 md:flex p-5 flex-col items-center relative">
+            <h3 className=" flex justify-center text-3xl py-1 mt-20 mb-3">
+              Certifications
+            </h3>
             <p className="text-md p-4 leading-8 text-gray-800 dark:text-teal-600 flex text-center">
               I have completed many courses and certifications. Here are some of
-              them. I am always learning new things and trying to improve my skills. I am currently learning React js.
+              them. I am always learning new things and trying to improve my
+              skills. I am currently learning React js.
             </p>
-              <Carousel />
+            <Carousel />
           </div>
         </section>
 
         {/* Communication and footer */}
-        <section className>
-          <div className="lg:flex gap-16 md:flex mt-20 shadow-xl p-5">
+        <section className="shadow-lg mt-5">
+          <div className="lg:flex gap-16 md:flex mt-20 p-5">
             <div className="flex flex-col items-center mb-5">
               <h3 className="font-semibold text-lg p-4">Feedback Form</h3>
               <form
