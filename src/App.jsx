@@ -220,8 +220,8 @@ const App = () => {
 
         {/* Certifications section  */}
         <section>
-          <div className="lg:flex gap-16 md:flex mt-20 shadow-xl p-5 flex-col items-center relative">
-            <h3 className="text-3xl py-1 mt-20 mb-3">Certifications</h3>
+          <div className="lg:flex gap-16 md:flex  shadow-xl p-5 flex-col items-center relative">
+            <h3 className=" flex justify-center text-3xl py-1 mt-20 mb-3">Certifications</h3>
             <p className="text-md p-4 leading-8 text-gray-800 dark:text-teal-600 flex text-center">
               I have completed many courses and certifications. Here are some of
               them. I am always learning new things and trying to improve my skills. I am currently learning React js.
