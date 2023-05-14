@@ -33,13 +33,13 @@ const Carousel = () => {
   }, [activeIndex, isPaused, images.length]);
 
   return (
-    <div className="mx-5 flex justify-center items-center flex-col">
+    <div className="mx-5 flex justify-center items-center flex-col object-contain">
       {images.map((image, index) => (
         <img
           key={index}
           src={image.src}
           alt={image.alt}
-          className={`h-auto max-w-3xl ${
+          className={`object-cover w-3xl h-auto flex items-center ${
             index === activeIndex
               ? "opacity-100 transition duration-1000 ease-in-out transform scale-100"
               : "hidden max-w-full opacity-40 transition duration-1000 ease-in-out transform scale-95"
