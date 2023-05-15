@@ -117,32 +117,6 @@ const MyTimeline = () => {
           color="text.secondary"
           className="dark:text-teal-600"
         >
-          2021-2025
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
-          <TimelineDot color="secondary">
-            <SchoolIcon />
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: "12px", px: 2 }}>
-          <Typography variant="h6" component="span">
-            Dumka Engineering College
-          </Typography>
-          <Typography className="dark:text-teal-400">
-            Presently a 2nd year student, pursuing B.Tech in Computer Science
-            and Engineering
-          </Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: "auto 0" }}
-          variant="body2"
-          color="text.secondary"
-          className="dark:text-teal-600"
-        >
           May 2023 - August 2023
         </TimelineOppositeContent>
         <TimelineSeparator>
