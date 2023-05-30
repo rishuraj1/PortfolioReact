@@ -128,7 +128,7 @@ const App = () => {
           </div>
 
           {/* Avatar */}
-          {/* <div
+          <div
             className="bg-gradient-to-b from-teal-500 rounded-full mt-16 mx-auto overflow-hidden relative flex cursor-pointer 
           transition duration-500 hover:scale-105 sm:h-52 sm:w-52 md:h-64 md:w-64 lg:h-72 lg:w-72 justify-center items-center"
           >
@@ -138,7 +138,7 @@ const App = () => {
               onMouseOver={() => setOver(true)}
               onMouseOut={() => setOver(false)}
             />
-          </div> */}
+          </div>
         </section>
 
         {/* About section */}
