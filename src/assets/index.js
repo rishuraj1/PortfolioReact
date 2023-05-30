@@ -10,3 +10,4 @@ export { default as bmcQrCode } from './bmcQrCode.png';
 export { default as GoldmanSachs } from './GoldmanSachs.png';
 export { default as JPMorgan } from './JPMorgan.png';
 export { default as IBM } from './IBM.png';
+export { default as resume } from './myResume.pdf';
