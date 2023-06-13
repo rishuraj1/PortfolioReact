@@ -17,6 +17,8 @@ import {
   buyMeACoffee,
   bmcQrCode,
   resume,
+  imagenationLogo,
+  portPhoto,
 } from "./assets";
 import {
   Project,
@@ -57,7 +59,7 @@ const App = () => {
     };
   }, []);
 
-  const designTools  = ["Figma", "Adobe XD", "Adobe Illustrator"];
+  const designTools = ["Figma", "Adobe XD", "Adobe Illustrator"];
   const codeTools = ["React", "Node", "Express", "MongoDB", "Firebase"];
   const consultingTools = ["Google Docs", "Google Sheets", "Google Slides"];
 
@@ -187,7 +189,7 @@ const App = () => {
         </section>
 
         {/* Projects section */}
-        <section className="shadow-lg mt-5">
+        <section className="shadow-lg mt-5 p-2">
           <div className="flex flex-col items-center">
             <h3 className="text-3xl py-1 mt-20 mb-3">Projects</h3>
             <p className="text-md p-4 leading-8 text-gray-800 dark:text-teal-600 flex text-center">
@@ -204,7 +206,7 @@ const App = () => {
             </p>
           </div>
 
-          <div className="lg:flex">
+          <div className="lg:flex gap-16 md:flex items-start justify-center p-2">
             <Project
               image={botImage}
               link={"https://github.com/rishuraj1/LilBot-Discord-Bot"}
@@ -212,7 +214,21 @@ const App = () => {
               details={
                 "I created a Discord bot project using ChatGPT AI that I am excited to showcase in my portfolio. The bot is designed to engage users in natural and intelligent conversation, responding to user input with relevant and contextual responses with a bit of sarcasm. It utilizes the powerful Da Vinci model from GPT-3 architecture."
               }
+              className="w-1/3"
             />
+            <Project
+              image={imagenationLogo}
+              link={"https://rishuraj1.github.io/ImageNation/"}
+              name={"ImageNation"}
+              details={"I have created a dynamic website using HTML, CSS, and JavaScript that harnesses the power of OpenAI's API to generate images based on text prompts. By integrating OpenAI's technology, the website allows users to input their desired text and receive a visually appealing image that corresponds to their prompt. Using HTML, I designed the structure of the website, ensuring a user-friendly interface for easy interaction. CSS was employed to style the website, enhancing its visual appeal and ensuring a cohesive and visually pleasing layout. JavaScript was utilized to handle the user input and facilitate the communication with OpenAI's API."}
+              className="w-1/3"
+            />
+            <Project
+              image={portPhoto}
+              link={"https://rishuraj1.github.io/PortfolioReact/"}
+              name={"My personal portfolio website"}
+              details={"I have developed a personalized portfolio using React.js, Tailwind CSS, and Material UI. This portfolio showcases my skills, experiences, and projects in a visually appealing and user-friendly manner. React.js, a popular JavaScript library, serves as the foundation for the portfolio. It enables me to build reusable and modular components, ensuring efficient and maintainable code. With React.js, the portfolio offers a seamless and interactive user experience, allowing smooth navigation and dynamic content updates. Tailwind CSS and Material UI were used to enhance the visual aesthetics of the portfolio."}
+              className="w-1/3" />
           </div>
         </section>
 
