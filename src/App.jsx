@@ -57,7 +57,7 @@ const App = () => {
     };
   }, []);
 
-  const designTools = ["Figma", "Adobe XD", "Adobe Illustrator"];
+  const designTools  = ["Figma", "Adobe XD", "Adobe Illustrator"];
   const codeTools = ["React", "Node", "Express", "MongoDB", "Firebase"];
   const consultingTools = ["Google Docs", "Google Sheets", "Google Slides"];
 
