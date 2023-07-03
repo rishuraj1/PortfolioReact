@@ -11,3 +11,5 @@ export { default as GoldmanSachs } from './GoldmanSachs.png';
 export { default as JPMorgan } from './JPMorgan.png';
 export { default as IBM } from './IBM.png';
 export { default as resume } from './myResume.pdf';
+export { default as imagenationLogo } from './imagenationLogo.png';
+export { default as portPhoto } from './portPhoto.jpg';

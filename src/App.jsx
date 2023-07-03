@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Typed from "typed.js";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -17,6 +17,8 @@ import {
   buyMeACoffee,
   bmcQrCode,
   resume,
+  imagenationLogo,
+  portPhoto,
 } from "./assets";
 import {
   Project,
@@ -76,10 +78,17 @@ const App = () => {
             </h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-xl"
-                />
+                {darkMode ?
+                  <BsFillSunFill
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="cursor-pointer fill-yellow-400 text-2xl transition duration-500 hover:scale-125 ease-in-out"
+                  />
+                  :
+                  <BsFillMoonStarsFill
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="cursor-pointer fill-slate-900 text-xl transition duration-500 hover:scale-125 ease-in-out"
+                  />
+                }
               </li>
               <li>
                 <a
@@ -187,7 +196,7 @@ const App = () => {
         </section>
 
         {/* Projects section */}
-        <section className="shadow-lg mt-5">
+        <section className="shadow-lg mt-5 p-2">
           <div className="flex flex-col items-center">
             <h3 className="text-3xl py-1 mt-20 mb-3">Projects</h3>
             <p className="text-md p-4 leading-8 text-gray-800 dark:text-teal-600 flex text-center">
@@ -204,15 +213,31 @@ const App = () => {
             </p>
           </div>
 
-          <div className="lg:flex">
+          <div className="lg:flex gap-16 md:flex items-start justify-center p-2">
             <Project
               image={botImage}
-              link={"https://github.com/rishuraj1/LilBot-Discord-Bot"}
+              githubLink={"https://github.com/rishuraj1/LilBot-Discord-Bot"}
               name={"LilBot - Discord Bot"}
               details={
                 "I created a Discord bot project using ChatGPT AI that I am excited to showcase in my portfolio. The bot is designed to engage users in natural and intelligent conversation, responding to user input with relevant and contextual responses with a bit of sarcasm. It utilizes the powerful Da Vinci model from GPT-3 architecture."
               }
+              className="w-1/3"
             />
+            <Project
+              image={imagenationLogo}
+              githubLink={"https://github.com/rishuraj1/ImageNation--React"}
+              projectLink={"https://imagenation.vercel.app/"}
+              name={"ImageNation"}
+              details={"This is a web app which produces images using AI by taking some input text(prompt) from user. Built using MERN stack and OpenAI API."}
+              className="w-1/3"
+            />
+            <Project
+              image={portPhoto}
+              githubLink={"https://github.com/rishuraj1/PortfolioReact"}
+              projectLink={"https://rishuraj1.github.io/PortfolioReact/"}
+              name={"My personal portfolio website"}
+              details={"I have developed a personalized portfolio using React.js, Tailwind CSS, and Material UI. This portfolio showcases my skills, experiences, and projects in a visually appealing and user-friendly manner. React.js, a popular JavaScript library, serves as the foundation for the portfolio. It enables me to build reusable and modular components, ensuring efficient and maintainable code. With React.js, the portfolio offers a seamless and interactive user experience, allowing smooth navigation and dynamic content updates. Tailwind CSS and Material UI were used to enhance the visual aesthetics of the portfolio."}
+              className="w-1/3" />
           </div>
         </section>
 
