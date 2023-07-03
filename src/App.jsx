@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Typed from "typed.js";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -78,10 +78,17 @@ const App = () => {
             </h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-xl"
-                />
+                {darkMode ?
+                  <BsFillSunFill
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="cursor-pointer fill-yellow-400 text-2xl transition duration-500 hover:scale-125 ease-in-out"
+                  />
+                  :
+                  <BsFillMoonStarsFill
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="cursor-pointer fill-slate-900 text-xl transition duration-500 hover:scale-125 ease-in-out"
+                  />
+                }
               </li>
               <li>
                 <a
@@ -209,7 +216,7 @@ const App = () => {
           <div className="lg:flex gap-16 md:flex items-start justify-center p-2">
             <Project
               image={botImage}
-              link={"https://github.com/rishuraj1/LilBot-Discord-Bot"}
+              githubLink={"https://github.com/rishuraj1/LilBot-Discord-Bot"}
               name={"LilBot - Discord Bot"}
               details={
                 "I created a Discord bot project using ChatGPT AI that I am excited to showcase in my portfolio. The bot is designed to engage users in natural and intelligent conversation, responding to user input with relevant and contextual responses with a bit of sarcasm. It utilizes the powerful Da Vinci model from GPT-3 architecture."
@@ -218,14 +225,16 @@ const App = () => {
             />
             <Project
               image={imagenationLogo}
-              link={"https://rishuraj1.github.io/ImageNation/"}
+              githubLink={"https://github.com/rishuraj1/ImageNation--React"}
+              projectLink={"https://imagenation.vercel.app/"}
               name={"ImageNation"}
-              details={"I have created a dynamic website using HTML, CSS, and JavaScript that harnesses the power of OpenAI's API to generate images based on text prompts. By integrating OpenAI's technology, the website allows users to input their desired text and receive a visually appealing image that corresponds to their prompt. Using HTML, I designed the structure of the website, ensuring a user-friendly interface for easy interaction. CSS was employed to style the website, enhancing its visual appeal and ensuring a cohesive and visually pleasing layout. JavaScript was utilized to handle the user input and facilitate the communication with OpenAI's API."}
+              details={"This is a web app which produces images using AI by taking some input text(prompt) from user. Built using MERN stack and OpenAI API."}
               className="w-1/3"
             />
             <Project
               image={portPhoto}
-              link={"https://rishuraj1.github.io/PortfolioReact/"}
+              githubLink={"https://github.com/rishuraj1/PortfolioReact"}
+              projectLink={"https://rishuraj1.github.io/PortfolioReact/"}
               name={"My personal portfolio website"}
               details={"I have developed a personalized portfolio using React.js, Tailwind CSS, and Material UI. This portfolio showcases my skills, experiences, and projects in a visually appealing and user-friendly manner. React.js, a popular JavaScript library, serves as the foundation for the portfolio. It enables me to build reusable and modular components, ensuring efficient and maintainable code. With React.js, the portfolio offers a seamless and interactive user experience, allowing smooth navigation and dynamic content updates. Tailwind CSS and Material UI were used to enhance the visual aesthetics of the portfolio."}
               className="w-1/3" />

@@ -39,11 +39,10 @@ const Carousel = () => {
           key={index}
           src={image.src}
           alt={image.alt}
-          className={`object-cover w-3xl h-auto flex items-center ${
-            index === activeIndex
-              ? "opacity-100 transition duration-1000 ease-in-out transform scale-100"
-              : "hidden max-w-full opacity-40 transition duration-1000 ease-in-out transform scale-95"
-          }`}
+          className={`object-cover w-3xl h-auto flex items-center ${index === activeIndex
+            ? "opacity-100 transition duration-1000 ease-in-out transform scale-100"
+            : "hidden max-w-full opacity-40 transition duration-1000 ease-in-out transform scale-95"
+            }`}
           onClick={() => handleClick(index)}
         />
       ))}
@@ -51,9 +50,9 @@ const Carousel = () => {
         <button className="mx-2" onClick={handlePlay}>
           {" "}
           {isPaused ? (
-            <BsFillPlayFill className="text-4xl text-gray-500 hover:text-gray-700 dark:hover:text-white" />
+            <BsFillPlayFill className="transition-all duration-200 ease-in-out text-4xl text-gray-500 hover:text-gray-700 dark:hover:text-white" />
           ) : (
-            <BsFillPauseFill className="text-4xl text-gray-500 hover:text-gray-700 dark:hover:text-white" />
+            <BsFillPauseFill className="transition-all duration-200 ease-in-out text-4xl text-gray-500 hover:text-gray-700 dark:hover:text-white" />
           )}{" "}
         </button>
       </div>
