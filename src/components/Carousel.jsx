@@ -25,7 +25,7 @@ const Carousel = () => {
     if (!isPaused) {
       interval = setInterval(() => {
         setActiveIndex((prevIndex) =>
-          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1,
         );
       }, 3000);
     }
@@ -39,10 +39,11 @@ const Carousel = () => {
           key={index}
           src={image.src}
           alt={image.alt}
-          className={`object-cover w-3xl h-auto flex items-center ${index === activeIndex
-            ? "opacity-100 transition duration-1000 ease-in-out transform scale-100"
-            : "hidden max-w-full opacity-40 transition duration-1000 ease-in-out transform scale-95"
-            }`}
+          className={`object-cover w-3xl h-auto flex items-center ${
+            index === activeIndex
+              ? "opacity-100 transition duration-1000 ease-in-out transform scale-100"
+              : "hidden max-w-full opacity-40 transition duration-1000 ease-in-out transform scale-95"
+          }`}
           onClick={() => handleClick(index)}
         />
       ))}

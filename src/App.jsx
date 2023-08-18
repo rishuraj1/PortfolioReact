@@ -34,7 +34,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [name, setName] = useState("");
   const [messege, setMessege] = useState("");
-  const [over, setOver] = useState(false);
+  // const [over, setOver] = useState(false);
 
   const el = React.useRef(null);
   const typed = React.useRef(null);
@@ -78,17 +78,17 @@ const App = () => {
             </h1>
             <ul className="flex items-center">
               <li>
-                {darkMode ?
+                {darkMode ? (
                   <BsFillSunFill
                     onClick={() => setDarkMode(!darkMode)}
                     className="cursor-pointer fill-yellow-400 text-2xl transition duration-500 hover:scale-125 ease-in-out"
                   />
-                  :
+                ) : (
                   <BsFillMoonStarsFill
                     onClick={() => setDarkMode(!darkMode)}
                     className="cursor-pointer fill-slate-900 text-xl transition duration-500 hover:scale-125 ease-in-out"
                   />
-                }
+                )}
               </li>
               <li>
                 <a
@@ -143,9 +143,9 @@ const App = () => {
           >
             <img
               className="object-cover w-full h-full flex items-center"
-              src={over ? myPhoto : photo}
-              onMouseOver={() => setOver(true)}
-              onMouseOut={() => setOver(false)}
+              src={photo}
+              // onMouseOver={() => setOver(true)}
+              // onMouseOut={() => setOver(false)}
             />
           </div>
         </section>
@@ -228,7 +228,9 @@ const App = () => {
               githubLink={"https://github.com/rishuraj1/ImageNation--React"}
               projectLink={"https://imagenation.vercel.app/"}
               name={"ImageNation"}
-              details={"This is a web app which produces images using AI by taking some input text(prompt) from user. Built using MERN stack and OpenAI API."}
+              details={
+                "This is a web app which produces images using AI by taking some input text(prompt) from user. Built using MERN stack and OpenAI API."
+              }
               className="w-1/3"
             />
             <Project
@@ -236,8 +238,11 @@ const App = () => {
               githubLink={"https://github.com/rishuraj1/PortfolioReact"}
               projectLink={"https://rishuraj1.github.io/PortfolioReact/"}
               name={"My personal portfolio website"}
-              details={"I have developed a personalized portfolio using React.js, Tailwind CSS, and Material UI. This portfolio showcases my skills, experiences, and projects in a visually appealing and user-friendly manner. React.js, a popular JavaScript library, serves as the foundation for the portfolio. It enables me to build reusable and modular components, ensuring efficient and maintainable code. With React.js, the portfolio offers a seamless and interactive user experience, allowing smooth navigation and dynamic content updates. Tailwind CSS and Material UI were used to enhance the visual aesthetics of the portfolio."}
-              className="w-1/3" />
+              details={
+                "I have developed a personalized portfolio using React.js, Tailwind CSS, and Material UI. This portfolio showcases my skills, experiences, and projects in a visually appealing and user-friendly manner. React.js, a popular JavaScript library, serves as the foundation for the portfolio. It enables me to build reusable and modular components, ensuring efficient and maintainable code. With React.js, the portfolio offers a seamless and interactive user experience, allowing smooth navigation and dynamic content updates. Tailwind CSS and Material UI were used to enhance the visual aesthetics of the portfolio."
+              }
+              className="w-1/3"
+            />
           </div>
         </section>
 

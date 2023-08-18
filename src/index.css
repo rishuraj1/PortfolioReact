@@ -31,10 +31,10 @@ a {
 
 @font-face {
   font-family: "burtons";
-  src: url('./assets/Burtons.otf');
+  src: url("./assets/Burtons.otf");
 }
 
 @font-face {
   font-family: "pacifico";
-  src: url('./assets/Pacifico-Regular.ttf');
+  src: url("./assets/Pacifico-Regular.ttf");
 }

@@ -11,17 +11,17 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'sm': "100px",
-      'md': "400px",
-      'lg': "768px",
+      sm: "100px",
+      md: "400px",
+      lg: "768px",
     },
     extend: {
-      transform: ['hover', 'focus'],
+      transform: ["hover", "focus"],
       fontFamily: {
         burtons: "burtons",
-        pacifico: "pacifico"
+        pacifico: "pacifico",
       },
     },
   },
   plugins: [],
-}
+};

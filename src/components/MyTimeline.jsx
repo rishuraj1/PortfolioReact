@@ -35,7 +35,9 @@ const MyTimeline = () => {
           <Typography variant="h6" component="span">
             Birth
           </Typography>
-          <Typography className="dark:text-teal-400">This is the day, I was born.</Typography>
+          <Typography className="dark:text-teal-400">
+            This is the day, I was born.
+          </Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -58,7 +60,9 @@ const MyTimeline = () => {
           <Typography variant="h6" component="span">
             Sacred Heart School
           </Typography>
-          <Typography className="dark:text-teal-400">Graduated from high school with 84%</Typography>
+          <Typography className="dark:text-teal-400">
+            Graduated from high school with 84%
+          </Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -81,7 +85,9 @@ const MyTimeline = () => {
           <Typography variant="h6" component="span">
             Mother International Academy
           </Typography>
-          <Typography className="dark:text-teal-400">Graduated from senior secondary high school</Typography>
+          <Typography className="dark:text-teal-400">
+            Graduated from senior secondary high school
+          </Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
