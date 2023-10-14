@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Typed from "typed.js";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import {
@@ -9,9 +9,6 @@ import {
 } from "react-icons/ai";
 import {
   photo,
-  myPhoto,
-  consulting,
-  code,
   botImage,
   bmcbuttonwhite,
   buyMeACoffee,
@@ -19,10 +16,16 @@ import {
   resume,
   imagenationLogo,
   portPhoto,
+  NodeJS,
+  NextJS,
+  MongoDB,
+  ReactJS,
+  ExpressJS,
+  Figma,
+  JavaScript
 } from "./assets";
 import {
   Project,
-  Service,
   Coffee,
   QRcode,
   DesignParticles,
@@ -59,9 +62,36 @@ const App = () => {
     };
   }, []);
 
-  const designTools = ["Figma", "Adobe XD", "Adobe Illustrator"];
-  const codeTools = ["React", "Node", "Express", "MongoDB", "Firebase"];
-  const consultingTools = ["Google Docs", "Google Sheets", "Google Slides"];
+  const tools = [
+    {
+      name: "Node.js",
+      image: NodeJS,
+    },
+    {
+      name: "Next.js",
+      image: NextJS,
+    },
+    {
+      name: "MongoDB",
+      image: MongoDB,
+    },
+    {
+      name: "React.js",
+      image: ReactJS,
+    },
+    {
+      name: "Express.js",
+      image: ExpressJS,
+    },
+    {
+      name: "Figma",
+      image: Figma,
+    },
+    {
+      name: "JavaScript",
+      image: JavaScript,
+    },
+  ]
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -92,6 +122,7 @@ const App = () => {
               </li>
               <li>
                 <a
+                  rel="noreferrer"
                   className="bg-gradient-to-r hover:bg-gradient-to-l from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md 
               ml-8"
                   href={resume}
@@ -122,16 +153,17 @@ const App = () => {
             </p>
           </div>
           <div className="flex text-5xl justify-center gap-16 py-3 text-gray-600">
-            <a href="https://twitter.com/rrishu561" target="_blank">
+            <a rel="noreferrer" href="https://twitter.com/rrishu561" target="_blank">
               <AiFillTwitterCircle className="hover:fill-[#1d9bf0] transform transition duration-500 hover:scale-125 flex justify-center items-center" />
             </a>
             <a
+              rel="noreferrer"
               href="https://www.linkedin.com/in/rishu-raj-b380041a1/"
               target="_blank"
             >
               <AiFillLinkedin className="hover:fill-[#0a66c2]  transform transition duration-500 hover:scale-125 flex justify-center items-center" />
             </a>
-            <a href="https://github.com/rishuraj1" target="_blank">
+            <a rel="noreferrer" href="https://github.com/rishuraj1" target="_blank">
               <AiFillGithub className="dark:hover:fill-[#f0f6fc] hover:fill-black  transform transition duration-500 hover:scale-125 flex justify-center items-center" />
             </a>
           </div>
@@ -144,8 +176,8 @@ const App = () => {
             <img
               className="object-cover w-full h-full flex items-center"
               src={photo}
-              // onMouseOver={() => setOver(true)}
-              // onMouseOut={() => setOver(false)}
+            // onMouseOver={() => setOver(true)}
+            // onMouseOut={() => setOver(false)}
             />
           </div>
         </section>
@@ -162,36 +194,20 @@ const App = () => {
               from the feedback section below.
             </p>
           </div>
-          <div className="lg:flex gap-16 md:flex items-start justify-center">
-            <Service
-              image={code}
-              name={"Beautiful Designs"}
-              about={
-                "Creating elegant designs according to your needs. Following core design theory."
-              }
-              toolsHeader={"Design tools I use: "}
-              tools={designTools}
-            />
-
-            <Service
-              image={code}
-              name={"Latest Technology"}
-              about={
-                "I always work on improving my skills. One of the ways to do that is to always learn new things. I keep myself updated with latest technologies so I can achieve my goals."
-              }
-              toolsHeader={"Coding Tools/Tech I use: "}
-              tools={codeTools}
-            />
-
-            <Service
-              image={consulting}
-              name={"Easy to interact UI"}
-              about={
-                "I always try to make my UI as simple as possible. I try to make it easy to interact with. I try to make it as minimal as possible."
-              }
-              toolsHeader={"Consulting tools I use: "}
-              tools={consultingTools}
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-10">
+            {
+              tools.map((tool, index) => {
+                return (
+                  <div key={index} className="items-center flex justify-center">
+                    <div className="items-center">
+                      <div className="w-[100px]">
+                        <img src={tool.image} />
+                      </div>
+                    </div>
+                  </div>
+                )
+              })
+            }
           </div>
         </section>
 

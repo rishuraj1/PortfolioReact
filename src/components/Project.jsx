@@ -1,4 +1,3 @@
-import * as React from "react";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 
 const Project = ({ githubLink, projectLink, image, name, details }) => {
@@ -19,17 +18,17 @@ const Project = ({ githubLink, projectLink, image, name, details }) => {
         {/* <button className='bg-gradient-to-r hover:bg-gradient-to-l from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md \ml-8' onClick={openLink}>View Project</button> */}
         {projectLink ? (
           <div className="flex gap-2 justify-center items-center">
-            <a href={githubLink} target="_blank">
+            <a rel="noreferrer" href={githubLink} target="_blank">
               <AiFillGithub className="cursor-pointer text-2xl transition duration-500 hover:scale-125 ease-in-out" />
             </a>
 
-            <a href={projectLink} target="_blank">
+            <a rel="noreferrer" href={projectLink} target="_blank">
               <AiOutlineLink className="cursor-pointer text-2xl transition duration-500 hover:scale-125 ease-in-out hover:fill-purple-600" />
             </a>
           </div>
         ) : (
           <div>
-            <a href={githubLink} target="_blank">
+            <a rel="noreferrer" href={githubLink} target="_blank">
               <AiFillGithub className="cursor-pointer text-2xl transition duration-500 hover:scale-125 ease-in-out" />
             </a>
           </div>

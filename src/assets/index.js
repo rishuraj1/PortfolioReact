@@ -13,3 +13,13 @@ export { default as IBM } from "./IBM.png";
 export { default as resume } from "./myResume.pdf";
 export { default as imagenationLogo } from "./imagenationLogo.png";
 export { default as portPhoto } from "./portPhoto.jpg";
+
+// logos
+
+export { default as ExpressJS } from "./logos/express_logo.png";
+export { default as Figma } from './logos/figma_logo.png'
+export { default as JavaScript } from './logos/javascript_logo.png'
+export { default as MongoDB } from './logos/mongodb_logo.png'
+export { default as NextJS } from './logos/nextjs-icon.png'
+export { default as NodeJS } from './logos/nodejs-1-logo-svg-vector.svg'
+export { default as ReactJS } from './logos/react_logo.png'
