@@ -33,10 +33,7 @@ const MyTimeline = () => {
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography variant="h6" component="span">
-            Birth
-          </Typography>
-          <Typography className="dark:text-teal-400">
-            This is the day, I was born.
+            DOB
           </Typography>
         </TimelineContent>
       </TimelineItem>
@@ -111,8 +108,8 @@ const MyTimeline = () => {
             Dumka Engineering College
           </Typography>
           <Typography className="dark:text-teal-400">
-            Presently a 2nd year student, pursuing B.Tech in Computer Science
-            and Engineering
+            Currently in 5th semester, pursuing B.Tech in Computer Science and
+            Engineering
           </Typography>
         </TimelineContent>
       </TimelineItem>
@@ -137,9 +134,10 @@ const MyTimeline = () => {
             GirlScript Summer of Code 2023
           </Typography>
           <Typography className="dark:text-teal-400">
-            Will be a participant in GSSoC 2023, contributing to develop complex
-            projects and learning new technologies with some of the brightest
-            minds as mentors and co-participants.
+            Participated in GSSoC 2023, contributing to develop complex projects
+            and learn new technologies with some of the brightest minds as
+            mentors and co-participants. Top contributor with more than 30 PRs
+            successfully merged.
           </Typography>
         </TimelineContent>
       </TimelineItem>
