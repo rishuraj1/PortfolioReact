@@ -13,6 +13,8 @@ export { default as IBM } from "./IBM.png";
 export { default as resume } from "./myResume.pdf";
 export { default as imagenationLogo } from "./imagenationLogo.png";
 export { default as portPhoto } from "./portPhoto.jpg";
+export { default as bleedink } from './bleedink.png'
+export { default as gssoc } from './gssoc.png'
 
 // logos
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { JPMorgan, IBM, GoldmanSachs } from "../assets";
+import { JPMorgan, IBM, GoldmanSachs, gssoc } from "../assets";
 import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
 
 const Carousel = () => {
@@ -10,6 +10,11 @@ const Carousel = () => {
     { src: JPMorgan, alt: "JP Morgan certification" },
     { src: IBM, alt: "IBM certificate" },
     { src: GoldmanSachs, alt: "Goldman Sachs certificate" },
+    { src: gssoc, alt: "GSSoC certificate" },
+    {
+      src: "https://d1zpw5mq5bnzyn.cloudfront.net/images/fc000fb8b3b64fccb805d93f09c11cfd.jpeg",
+      alt: "Equitable Hacks certificate",
+    },
   ];
 
   const handleClick = (index) => {
@@ -25,7 +30,7 @@ const Carousel = () => {
     if (!isPaused) {
       interval = setInterval(() => {
         setActiveIndex((prevIndex) =>
-          prevIndex === images.length - 1 ? 0 : prevIndex + 1,
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
       }, 3000);
     }

@@ -22,7 +22,8 @@ import {
   ReactJS,
   ExpressJS,
   Figma,
-  JavaScript
+  JavaScript,
+  bleedink,
 } from "./assets";
 import {
   Project,
@@ -91,7 +92,7 @@ const App = () => {
       name: "JavaScript",
       image: JavaScript,
     },
-  ]
+  ];
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -153,7 +154,11 @@ const App = () => {
             </p>
           </div>
           <div className="flex text-5xl justify-center gap-16 py-3 text-gray-600">
-            <a rel="noreferrer" href="https://twitter.com/rrishu561" target="_blank">
+            <a
+              rel="noreferrer"
+              href="https://twitter.com/rrishu561"
+              target="_blank"
+            >
               <AiFillTwitterCircle className="hover:fill-[#1d9bf0] transform transition duration-500 hover:scale-125 flex justify-center items-center" />
             </a>
             <a
@@ -163,7 +168,11 @@ const App = () => {
             >
               <AiFillLinkedin className="hover:fill-[#0a66c2]  transform transition duration-500 hover:scale-125 flex justify-center items-center" />
             </a>
-            <a rel="noreferrer" href="https://github.com/rishuraj1" target="_blank">
+            <a
+              rel="noreferrer"
+              href="https://github.com/rishuraj1"
+              target="_blank"
+            >
               <AiFillGithub className="dark:hover:fill-[#f0f6fc] hover:fill-black  transform transition duration-500 hover:scale-125 flex justify-center items-center" />
             </a>
           </div>
@@ -176,8 +185,8 @@ const App = () => {
             <img
               className="object-cover w-full h-full flex items-center"
               src={photo}
-            // onMouseOver={() => setOver(true)}
-            // onMouseOut={() => setOver(false)}
+              // onMouseOver={() => setOver(true)}
+              // onMouseOut={() => setOver(false)}
             />
           </div>
         </section>
@@ -195,24 +204,22 @@ const App = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-10">
-            {
-              tools.map((tool, index) => {
-                return (
-                  <div key={index} className="items-center flex justify-center">
-                    <div className="items-center">
-                      <div className="w-[100px]">
-                        <img src={tool.image} />
-                      </div>
+            {tools.map((tool, index) => {
+              return (
+                <div key={index} className="items-center flex justify-center">
+                  <div className="items-center">
+                    <div className="w-[100px]">
+                      <img src={tool.image} />
                     </div>
                   </div>
-                )
-              })
-            }
+                </div>
+              );
+            })}
           </div>
         </section>
 
         {/* Projects section */}
-        <section className="shadow-lg mt-5 p-2">
+        <section className="shadow-lg mt-5 p-2 flex flex-col">
           <div className="flex flex-col items-center">
             <h3 className="text-3xl py-1 mt-20 mb-3">Projects</h3>
             <p className="text-md p-4 leading-8 text-gray-800 dark:text-teal-600 flex text-center">
@@ -229,7 +236,7 @@ const App = () => {
             </p>
           </div>
 
-          <div className="lg:flex gap-16 md:flex items-start justify-center p-2">
+          <div className="lg:flex flex-wrap gap-16 md:flex items-start justify-center p-2">
             <Project
               image={botImage}
               githubLink={"https://github.com/rishuraj1/LilBot-Discord-Bot"}
@@ -237,7 +244,7 @@ const App = () => {
               details={
                 "I created a Discord bot project using ChatGPT AI that I am excited to showcase in my portfolio. The bot is designed to engage users in natural and intelligent conversation, responding to user input with relevant and contextual responses with a bit of sarcasm. It utilizes the powerful Da Vinci model from GPT-3 architecture."
               }
-              className="w-1/3"
+              className="w-1/4"
             />
             <Project
               image={imagenationLogo}
@@ -247,7 +254,7 @@ const App = () => {
               details={
                 "This is a web app which produces images using AI by taking some input text(prompt) from user. Built using MERN stack and OpenAI API."
               }
-              className="w-1/3"
+              className="w-1/4"
             />
             <Project
               image={portPhoto}
@@ -257,7 +264,17 @@ const App = () => {
               details={
                 "I have developed a personalized portfolio using React.js, Tailwind CSS, and Material UI. This portfolio showcases my skills, experiences, and projects in a visually appealing and user-friendly manner. React.js, a popular JavaScript library, serves as the foundation for the portfolio. It enables me to build reusable and modular components, ensuring efficient and maintainable code. With React.js, the portfolio offers a seamless and interactive user experience, allowing smooth navigation and dynamic content updates. Tailwind CSS and Material UI were used to enhance the visual aesthetics of the portfolio."
               }
-              className="w-1/3"
+              className="w-1/4"
+            />
+            <Project
+              image={bleedink}
+              githubLink={"https://github.com/rishuraj1/BleedInk"}
+              projectLink={"https://bleedink.vercel.app/"}
+              name={"BleedINK - A blogging website with AI"}
+              details={
+                "BleedINK is a blogging website with AI. It is a full stack web app built using MERN stack and OpenAI API. It is a blogging website where users can write blogs with help of AI. It is a platform where users can share their thoughts and ideas with the world."
+              }
+              className="w-1/4"
             />
           </div>
         </section>
